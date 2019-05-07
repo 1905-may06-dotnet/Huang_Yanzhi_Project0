@@ -1,0 +1,11 @@
+C:\Revature\Project0\Huang_Yanzhi_Project0\bin\Debug\netcoreapp2.1\BasicOfCSharp.deps.json
+C:\Revature\Project0\Huang_Yanzhi_Project0\bin\Debug\netcoreapp2.1\BasicOfCSharp.runtimeconfig.json
+C:\Revature\Project0\Huang_Yanzhi_Project0\bin\Debug\netcoreapp2.1\BasicOfCSharp.runtimeconfig.dev.json
+C:\Revature\Project0\Huang_Yanzhi_Project0\bin\Debug\netcoreapp2.1\BasicOfCSharp.dll
+C:\Revature\Project0\Huang_Yanzhi_Project0\bin\Debug\netcoreapp2.1\BasicOfCSharp.pdb
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.csprojAssemblyReference.cache
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.csproj.CoreCompileInputs.cache
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.AssemblyInfoInputs.cache
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.AssemblyInfo.cs
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.dll
+C:\Revature\Project0\Huang_Yanzhi_Project0\obj\Debug\netcoreapp2.1\BasicOfCSharp.pdb
