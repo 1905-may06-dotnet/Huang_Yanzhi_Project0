@@ -14,6 +14,7 @@ namespace PizzaBoxClient
         private int menuSelect = 0, mode=0, adminSelection=0;
         string decision = "", BackToMainMenu = "q"; 
         public int selectedLocaitonID = 0, LoginUserID=0;
+        public string[] toppingType = new string[8] { "Pepperoni", "Mushrooms", "Onions", "Sausage", "Bacon", "Extra cheese", "Black olives", "Green peppers" };
         public void RunApplication()
         {           
             do
@@ -213,12 +214,30 @@ namespace PizzaBoxClient
                 { doughUsed += i.ConvertSizeToNumber()*i.NumberOfPizza; }
             }
             Console.WriteLine("----------------------Inventory---------------------");
-            Console.WriteLine($"Dough:    {doughStored-doughUsed}");
-            Console.WriteLine("Pepperoni: 1000");
-            Console.WriteLine("Mushroom: 1000");
-            Console.WriteLine("Onion:    1000");
-            Console.WriteLine("Sausage:   1000");
+            Console.WriteLine($"Dough:         {doughStored-doughUsed}");
+            Console.WriteLine($"{toppingType[0]}:     {3000 - getUsedCountOfTopping(toppingType[0])}");
+            Console.WriteLine($"{toppingType[1]}:     {3000 - getUsedCountOfTopping(toppingType[1])}");
+            Console.WriteLine($"{toppingType[2]}:        {3000 - getUsedCountOfTopping(toppingType[2])}");
+            Console.WriteLine($"{toppingType[3]}:       {3000 - getUsedCountOfTopping(toppingType[3])}");
+            Console.WriteLine($"{toppingType[4]}:         {3000 - getUsedCountOfTopping(toppingType[4])}");
+            Console.WriteLine($"{toppingType[5]}:  {3000 - getUsedCountOfTopping(toppingType[5])}");
+            Console.WriteLine($"{toppingType[6]}:  {3000 - getUsedCountOfTopping(toppingType[6])}");
+            Console.WriteLine($"{toppingType[7]}: {3000 - getUsedCountOfTopping(toppingType[7])}");
             Console.WriteLine("----------------------------------------------------");
+        }
+        public int getUsedCountOfTopping(string keyword)
+        {
+            int count = 0;
+            Crud c = new Crud();
+            foreach (PizzaBoxData.data.PizzaOrder po in c.getLocationOrderHistory(selectedLocaitonID))
+            {
+                foreach (PizzaBoxData.data.Item item in c.GetItemByOrderID(po.OrderId))
+                {
+                    foreach (string t in item.splittedToppings())
+                    { if (t == keyword) count += item.NumberOfPizza;  }
+                }
+            }                       
+            return count;
         }
         public void AdminViewCustomers()
         {

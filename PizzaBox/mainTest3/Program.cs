@@ -12,8 +12,7 @@ namespace mainTest3
         static void Main(string[] args)
         {
 
-            
-            Client cl = new PizzaBoxClient.Client();
+             Client cl = new PizzaBoxClient.Client();
             cl.RunApplication();
 
         }

@@ -49,6 +49,11 @@ namespace PizzaBoxData.data
             }
             return count;
         }
+        public string[] splittedToppings()
+        {
+            string[] toppingsList = Toppings.Split(", ");
+            return toppingsList;
+        }
 
     }
 }

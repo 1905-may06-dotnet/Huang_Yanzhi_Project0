@@ -7,14 +7,14 @@ using PizzaBoxClient;
 namespace PizzaBoxTesting
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest2
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod2()
         {
             Client cl = new Client();          
-            var actualresult=cl.OnlyNum("12345HI");
-            var expectedResult = false;
+            var actualresult=cl.OnlyCharSpace("HI world");
+            var expectedResult = true;
             Assert.AreEqual(expectedResult,actualresult);
         }
     }

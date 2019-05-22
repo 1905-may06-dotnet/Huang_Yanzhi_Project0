@@ -25,7 +25,7 @@ namespace PizzaBoxData.data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=evanh2019dbserver.database.windows.net;Database=PizzaBoxDb;user id=evanhuang10;Password=Cs7282293;");
+                optionsBuilder.UseSqlServer("Server=evanh2019dbserver.database.windows.net;Database=PizzaBoxDb;Server=evanh2019dbserver.database.windows.net;Database=PizzaBoxDb;user id=evanhuang10;Password=Password123;");
             }
         }
 
