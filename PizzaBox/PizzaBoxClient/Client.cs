@@ -126,29 +126,35 @@ namespace PizzaBoxClient
         }
         public void AdminEvents()
         {
-            Console.WriteLine("---------------Admin---------------");
-            ViewLocation();
-            SelectLocation();
             do
             {
-            DisplayAdminOptions();
-            AdminOptions();
+                Console.WriteLine("---------------Admin---------------");
+                ViewLocation();
+                SelectLocation();
+                do
+                {
+                    DisplayAdminOptions();
+                    AdminOptions();
+                }
+                while (adminSelection != 5&& adminSelection != 6);
             }
-            while (adminSelection != 5) ;
+            while (adminSelection != 6);
         }
         public void DisplayAdminOptions()
         {
             Console.WriteLine("------------Admin Options----------");
+            Console.WriteLine($"------------Location: {selectedLocaitonID}------------");
             Console.WriteLine("(1) View Orders");
             Console.WriteLine("(2) View Sales");
             Console.WriteLine("(3) View Inventory");
             Console.WriteLine("(4) View Customers");
-            Console.WriteLine("(5) Main menu");
+            Console.WriteLine("(5) Select a Location");
+            Console.WriteLine("(6) Go Back to Main menu");
             Console.WriteLine("-----------------------------------");
         }
         public void AdminOptions()
         {
-            adminSelection = inputValidation(1, 5);
+            adminSelection = inputValidation(1, 6);
             switch (adminSelection)
             {
                 case 1:
@@ -166,7 +172,7 @@ namespace PizzaBoxClient
                 default:
                     break;
             }
-            if (adminSelection != 5 && adminSelection!= 1)
+            if (adminSelection != 5 && adminSelection != 6 && adminSelection!= 1)
             {
                 Console.WriteLine("press Enter key to continue...");
                 string str = Console.ReadLine();
